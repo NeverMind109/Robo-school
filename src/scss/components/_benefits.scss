@@ -1,0 +1,29 @@
+.benefits {
+  background-color: #f9f9f9;
+  padding: 100px 0;
+
+  &__title {
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+  }
+  &__item {
+    grid-column: 4 span;
+  }
+  &__subtitle {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+  }
+  &__descr {
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--color-text);
+  }
+}
