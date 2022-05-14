@@ -18,6 +18,8 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
+  font-weight: 400;
+  font-style: normal;
   font-size: 16px;
 }
 
@@ -100,6 +102,12 @@ a {
   max-width: var(--container-width);
 }
 
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-fluid-width);
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
@@ -120,4 +128,27 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.phone {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 160%;
+  text-align: right;
+  color: var(--color-light);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: center;
+  color: var(--color-light);
+  padding: 25px 30px;
+  background-color: var(--color-accent);
+  border-radius: 5px;
 }
