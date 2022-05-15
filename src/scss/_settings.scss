@@ -151,6 +151,9 @@ a {
   padding: 25px 30px;
   background-color: var(--color-accent);
   border-radius: 5px;
+  &--dark {
+    background-color: var(--color-dark);
+  }
 }
 
 .section-title {
