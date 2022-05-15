@@ -1,9 +1,6 @@
 .benefits {
   background-color: #f9f9f9;
   padding: 100px 0;
-
-  &__title {
-  }
   &__list {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
