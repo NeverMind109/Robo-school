@@ -12,5 +12,11 @@ createPopper(el, tooltip, {
         offset: [0, 10],
       },
     },
+    {
+      name: "preventOverflow",
+      options: {
+        mainAxis: false, // true by default
+      },
+    },
   ],
 });
