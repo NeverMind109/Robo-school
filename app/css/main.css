@@ -393,6 +393,7 @@ a {
 }
 
 .burger {
+  display: none;
   position: relative;
   width: 44px;
   height: 44px;
@@ -422,7 +423,15 @@ a {
   transform: translateY(-50%);
   margin-top: 7px;
 }
+@media (max-width: 992px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .burger-close {
+  display: none;
   position: absolute;
   top: 10px;
   right: var(--container-offset);
@@ -435,6 +444,13 @@ a {
   background-position: center;
   background-size: 14px 12px;
   background-repeat: no-repeat;
+}
+@media (max-width: 992px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .social {
