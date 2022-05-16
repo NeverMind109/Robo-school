@@ -5,9 +5,22 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 40px;
+
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
   }
   &__item {
     grid-column: 4 span;
+
+    @include high-desktop {
+      grid-column: 6 span;
+    }
+    @include mobile {
+      grid-column: 4 span;
+      text-align: center;
+    }
   }
   &__subtitle {
     display: inline-flex;
@@ -17,10 +30,22 @@
     line-height: 160%;
     color: var(--color-dark);
     margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
   &__descr {
     font-size: 18px;
     line-height: 160%;
     color: var(--color-text);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
   }
 }

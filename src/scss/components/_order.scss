@@ -1,7 +1,9 @@
 .order {
   @include image-set("../img/percents");
-  padding: 87px 0;
   background-color: var(--color-accent);
+  background-position: bottom center;
+  background-size: cover;
+  padding: 87px 0;
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -9,6 +11,13 @@
   &__left {
     grid-column: 5 span;
     padding-left: 60px;
+
+    @include high-tablet {
+      grid-column: 12 span;
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
   }
   &__title {
     font-weight: 600;
@@ -16,19 +25,41 @@
     line-height: 130%;
     color: var(--color-light);
     margin-bottom: 20px;
+    @include mobile {
+      font-size: 30px;
+      line-height: 140%;
+    }
   }
   &__descr {
     font-size: 20px;
     line-height: 130%;
     color: var(--color-light);
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
   &__right {
     grid-column: 7 span;
     display: flex;
     justify-content: flex-end;
     padding-right: 60px;
+
+    @include high-tablet {
+      grid-column: 12 span;
+      justify-content: center;
+      padding-right: 0;
+    }
   }
   &__form {
     max-width: 500px;
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
   }
 }

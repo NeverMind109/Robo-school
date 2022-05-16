@@ -6,6 +6,8 @@
 
 // подключения компонентов страницы
 @import "./components/form";
+@import "./components/burger";
+@import "./components/social";
 @import "./components/header";
 @import "./components/navigation";
 @import "./components/hero";
@@ -14,3 +16,5 @@
 @import "./components/trainers";
 @import "./components/prices";
 @import "./components/order";
+@import "./components/footer";
+@import "./components/modals";

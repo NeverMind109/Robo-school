@@ -4,6 +4,13 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 40px;
+
+    @include high-tablet {
+      gap: 20px;
+    }
+    @include small-tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
   &__item {
     grid-column: 4 span;
@@ -20,6 +27,17 @@
       border: 1px solid var(--color-dark);
       color: var(--color-light);
       transform: scaleY(1.1);
+
+      @include high-desktop {
+        transform: scaleY(1);
+      }
+    }
+
+    @include high-tablet {
+      padding: 40px 20px;
+    }
+    @include small-tablet {
+      grid-column: 8 span;
     }
   }
   &__subtitle {
@@ -46,6 +64,9 @@
       background-color: currentColor;
       margin-left: 10px;
     }
+    @include mobile {
+      font-size: 30px;
+    }
   }
   &__cost {
     font-weight: 600;
@@ -53,15 +74,45 @@
     line-height: 160%;
     text-align: center;
     margin: 60px auto 20px;
+
+    @include high-desktop {
+      font-size: 45px;
+    }
+    @include high-tablet {
+      font-size: 30px;
+    }
+    @include mobile {
+      font-size: 50px;
+      margin: 40px 0 20px;
+    }
   }
   &__descr {
     font-size: 18px;
     line-height: 160%;
     text-align: center;
     margin-bottom: auto;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
   &__btn {
     width: 100%;
     margin-top: 60px;
+
+    @include high-tablet {
+      min-width: auto;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    @include mobile {
+      font-size: 16px;
+      padding: 17px 20px;
+      margin-top: 40px;
+    }
+  }
+
+  @include small-tablet {
+    padding: 0 0 60px;
   }
 }

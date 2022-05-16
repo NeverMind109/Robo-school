@@ -6,5 +6,31 @@
   padding: 30px 0;
   &__container {
     @include flex-all-sb;
+
+    @include high-tablet {
+      justify-content: initial;
+    }
+    @include mobile {
+      align-items: center;
+    }
+  }
+  &__phone {
+    @include high-tablet {
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      font-size: 0;
+      background-image: url("../img/phone.svg");
+      background-position: center;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+
+  @include mobile {
+    padding: 10px 0;
   }
 }
